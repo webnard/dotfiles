@@ -166,4 +166,4 @@ bar {
         status_command i3status
 }
 exec /usr/lib/gnome-settings-daemon/gnome-settings-daemon
-
+exec xrandr --output HDMI-0 --off

@@ -31,7 +31,7 @@ ethernet _first_ {
 }
 
 volume master {
-  device ="pulse:1"
+  device ="pulse:0"
   format_muted = "🔇"
   format = "🔊 %volume"
 }
