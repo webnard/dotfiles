@@ -19,10 +19,10 @@ set $FOCUSED_BG #040612
 set $FOCUSED_FG #F2EBC7
 
 # class                 border  backgr. text    indicator child_border
-client.focused          $FOCUSED_BG $FOCUSED_BG $FOCUSED_FG $IMPORTANT $FOCUSED_FG
+client.focused          $FOCUSED_BG $FOCUSED_BG $FOCUSED_FG $IMPORTANT $FOCUSED_BG
 client.focused_inactive $FOCUSED_INACTIVE_BG $UNFOCUSED_INACTIVE_BG $FOCUSED_INACTIVE_FG $IMPORTANT $FOCUSED_INACTIVE_FG
-client.unfocused        $UNFOCUSED_BG $UNFOCUSED_BG $UNFOCUSED_FG $IMPORTANT $UNFOCUSED_FG
-client.urgent           $UNFOCUSED_BG $UNUNFOCUSED_BG $IMPORTANT $IMPORTANT $UNFOCUSED_FG
+client.unfocused        $UNFOCUSED_BG $UNFOCUSED_BG $UNFOCUSED_FG $IMPORTANT $UNFOCUSED_BG
+client.urgent           $UNFOCUSED_BG $UNUNFOCUSED_BG $IMPORTANT $IMPORTANT $UNFOCUSED_BG
 client.background $UNFOCUSED_BG
 
 new_window pixel 4
@@ -31,7 +31,7 @@ new_float pixel 4
 focus_follows_mouse no
 
 set $mod Mod1
-set $ws2 music
+set $ws2 2 music
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -187,12 +187,12 @@ assign [class="Spotify"] $ws2
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command py3status
 				colors {
 						background $FOCUSED_BG
 						statusline $FOCUSED_FG
-						focused_workspace $FOCUSED_BG $FOCUSED_BG $FOCUSED_FG
-						inactive_workspace $UNFOCUSED_BG $UNFOCUSED_BG $UNFOCUSED_FG
+						inactive_workspace $FOCUSED_BG $FOCUSED_BG $FOCUSED_FG
+						focused_workspace $UNFOCUSED_BG $UNFOCUSED_BG $UNFOCUSED_FG
 						urgent_workspace $IMPORTANT $IMPORTANT $FOCUSED_BG
 				}
 }
