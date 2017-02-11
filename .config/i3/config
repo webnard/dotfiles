@@ -148,6 +148,9 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+# lock screen
+bindsym $mod+Control+l exec gnome-screensaver-command -l
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -196,6 +199,7 @@ bar {
 						urgent_workspace $IMPORTANT $IMPORTANT $FOCUSED_BG
 				}
 }
-exec /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 exec --no-startup-id dunst
-exec xrandr --output HDMI-0 --off
+exec --no-startup-id xrandr --output HDMI-0 --off
+exec --no-startup-id gnome-screensaver &
