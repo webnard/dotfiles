@@ -60,6 +60,7 @@ autocmd BufEnter * let &titlestring = hostname() . "[vim(" . expand("%:t") . ")]
 set title
 set nu
 autocmd BufNewFile,BufRead *.ejs source $HOME/.vim/jst.vim
+autocmd BufNewFile,BufRead *.sg set syntax=surveygizmo
 autocmd BufNewFile,BufRead *.gs set syntax=javascript
 autocmd BufNewFile,BufRead *.go set noexpandtab
 autocmd BufNewFile,BufRead *.apib set syntax=markdown tabstop=4
