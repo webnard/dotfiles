@@ -15,7 +15,6 @@ Plugin 'tpope/vim-dispatch'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-
 " Disable YouCompleteMe at startup
 let g:loaded_youcompleteme = 1
 
@@ -59,6 +58,7 @@ set foldlevelstart=99
 autocmd BufEnter * let &titlestring = hostname() . "[vim(" . expand("%:t") . ")]"
 set title
 set nu
+set autoindent
 autocmd BufNewFile,BufRead *.ejs source $HOME/.vim/jst.vim
 autocmd BufNewFile,BufRead *.sg set syntax=surveygizmo
 autocmd BufNewFile,BufRead *.gs set syntax=javascript
@@ -67,11 +67,16 @@ autocmd BufNewFile,BufRead *.apib set syntax=markdown tabstop=4
 autocmd BufNewFile,BufRead *.mako set syntax=mako
 autocmd BufNewFile,BufRead *.sls set syntax=yaml
 autocmd BufNewFile,BufRead *.js set tabstop=2 expandtab shiftwidth=2
+autocmd BufNewFile,BufRead *.ctp set autoindent tabstop=4 shiftwidth=4
 autocmd BufNewFile,BufRead *.php set tabstop=2 expandtab shiftwidth=2
 autocmd BufNewFile,BufRead *.hs set tabstop=8 expandtab softtabstop=4 shiftwidth=4 shiftround
+autocmd BufNewFile,BufRead *.yaml set tabstop=4 expandtab softtabstop=4 shiftwidth=4 shiftround foldmethod=indent
 match ExtraWhitespace /\s\+$\| \+\ze\t/
 
 let g:rustfmt_autosave = 1
 set incsearch
 
 autocmd BufNewFile,BufRead ~/bb-am-sync/* set tabstop=4 shiftwidth=4
+autocmd BufNewFile,BufRead ~/upwork/benerfp/benerfp/* set tabstop=4 shiftwidth=4
+map ꧅ i
+imap ꧅ <esc>
