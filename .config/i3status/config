@@ -14,20 +14,25 @@ general {
         interval = 5
 }
 
+order += "window_title_async"
+order += "hamster"
 order += "spotify"
 order += "volume master"
 # order += "disk /"
 # order += "disk /home"
 # order += "wireless _first_"
 # order += "ethernet _first_"
-order += "cpu_usage"
-order += "external_script fan"
+#order += "cpu_usage"
+#order += "external_script fan"
 order += "tztime local"
 
-external_script fan {
-  script_path = "sensors | grep fan1 | awk '{print $2$3}'"
-}
+#extei3ipcrnal_script fan {
+#  script_path = "sensors | grep fan1 | awk '{print $2$3}'"
+#}
 
+window_title_async {
+    color = "#00FFFF"
+}
 wireless _first_ {
         format_up = "W: (%quality at %essid) %ip"
         format_down = "W: down"
