@@ -215,3 +215,4 @@ exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 exec --no-startup-id dunst
 #exec --no-startup-id xrandr --output HDMI-0 --off
 exec --no-startup-id gnome-screensaver &
+exec ~/.fehbg &
