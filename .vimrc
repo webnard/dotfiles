@@ -28,6 +28,7 @@ set formatoptions+=r "Keeps comments inline
 set nowrap "No more wordwrap; it's ugly
 set fileformat=unix
 set fileformats=unix,dos
+let mapleader = "\\"
 "set listchars=nbsp:¬
 nnoremap <space> za
 vnoremap <space> zf
@@ -56,12 +57,22 @@ set omnifunc=syntaxcomplete#Complete
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = { "mode": "passive" }
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
+let g:syntastic_javascript_eslint_exec='/usr/bin/ls'
+let g:syntastic_javascript_eslint_exe='eslint_d'
+nnoremap <leader>c :SyntasticCheck<CR>
+
+" Autofix entire buffer with eslint_d:
+nnoremap <leader>f mF:%!eslint_d --stdin --fix-to-stdout<CR>`F
+
+" Autofix visual selection with eslint_d:
+vnoremap <leader>f :!eslint_d --stdin --fix-to-stdout<CR>gv
+
 
 highlight ColorColumn ctermbg=black
 highlight ExtraWhitespace ctermbg=darkred
