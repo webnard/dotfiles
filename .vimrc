@@ -8,6 +8,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'rust-lang/rust.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'vim-syntastic/syntastic'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'joonty/vdebug'
@@ -50,6 +51,17 @@ filetype plugin on
 syntax on
 syntax enable
 set omnifunc=syntaxcomplete#Complete
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
 
 highlight ColorColumn ctermbg=black
 highlight ExtraWhitespace ctermbg=darkred
