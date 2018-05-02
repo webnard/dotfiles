@@ -107,3 +107,5 @@ set incsearch
 
 map ꧅ i
 imap ꧅ <esc>
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
