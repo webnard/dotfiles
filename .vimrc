@@ -7,8 +7,10 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'rust-lang/rust.vim'
+Plugin 'Chiel92/vim-autoformat'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'posva/vim-vue'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'joonty/vdebug'
@@ -66,6 +68,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec='/usr/bin/ls'
 let g:syntastic_javascript_eslint_exe='eslint_d'
 nnoremap <leader>c :SyntasticCheck<CR>
+nnoremap <leader>r :SyntasticReset<CR>
 
 " Autofix entire buffer with eslint_d:
 nnoremap <leader>f mF:%!eslint_d --stdin --fix-to-stdout<CR>`F
@@ -74,10 +77,11 @@ nnoremap <leader>f mF:%!eslint_d --stdin --fix-to-stdout<CR>`F
 vnoremap <leader>f :!eslint_d --stdin --fix-to-stdout<CR>gv
 
 
-highlight ColorColumn ctermbg=black
+highlight ColorColumn ctermbg=white
 highlight ExtraWhitespace ctermbg=darkred
-set colorcolumn=80
-set foldlevelstart=99
+colorscheme desert
+set colorcolumn=120
+set foldlevelstart=0
 
 autocmd BufEnter * let &titlestring = hostname() . "[vim(" . expand("%:t") . ")]"
 set title

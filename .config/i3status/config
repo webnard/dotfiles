@@ -15,9 +15,10 @@ general {
 }
 
 order += "window_title_async"
-order += "taskwarrior"
-order += "hamster"
+#order += "taskwarrior"
+#order += "hamster"
 order += "spotify"
+order += "gpmdp"
 order += "volume master"
 # order += "disk /"
 # order += "disk /home"
@@ -31,6 +32,11 @@ order += "tztime local"
 #  script_path = "sensors | grep fan1 | awk '{print $2$3}'"
 #}
 #
+#
+
+gpmdp {
+  format = "{album}: {title} — {artist}"
+}
 
 taskwarrior {
   color = "FFFF00"
