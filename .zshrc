@@ -59,7 +59,7 @@ ZSH_THEME="garyblessington"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+  git,
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -93,7 +93,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi="vim"
+alias fzf='fzf --preview="less {}" --bind "enter:execute(vim {})" --bind "pgup:preview-up" --bind "pgdn:preview-down"'
+alias dup="docker-compose up -d && docker-compose logs -f app"
 
 source /etc/profile.d/autojump.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+#bindkey -v
+#bindkey "^R" history-incremental-search-backward
