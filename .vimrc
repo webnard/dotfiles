@@ -11,6 +11,7 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'posva/vim-vue'
+Plugin 'elixir-editors/vim-elixir'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'joonty/vdebug'
@@ -107,5 +108,3 @@ set incsearch
 
 map ꧅ i
 imap ꧅ <esc>
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview

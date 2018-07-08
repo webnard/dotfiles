@@ -8,8 +8,10 @@ Favorites=New Profile.profile
 ShowMenuBarByDefault=false
 
 [MainWindow]
+Height 1080=1052
 Height 2160=2101
 MenuBar=Disabled
 State=AAAA/wAAAAD9AAAAAAAAB24AAAg1AAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
+Width 1920=632
 Width 3840=1902
