@@ -57,7 +57,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec konsole
 bindsym $mod+Shift+g exec google-chrome-stable
 bindsym $mod+Shift+u exec upwork
 bindsym $mod+Shift+s exec spotify
