@@ -1,8 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export GOPATH=$HOME/go
+export PATH="$HOME/.gem/ruby/2.5.0/bin:$HOME/bin:$GOPATH/bin:$HOME/.local/bin:$PATH"
+export VISUAL="vim"
+export ERL_AFLAGS="-kernel shell_history enabled"
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/ian/.oh-my-zsh
+export ZSH=/home/ian/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -98,6 +102,11 @@ alias dup="docker-compose up -d && docker-compose logs -f app"
 
 source /etc/profile.d/autojump.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 #[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 #bindkey -v
 #bindkey "^R" history-incremental-search-backward
+#
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
