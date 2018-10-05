@@ -200,6 +200,12 @@ bindsym $mod+F5 exec "playerctl play-pause"
 bindsym $mod+F10 exec "pulseaudio-ctl mute"
 bindsym $mod+F12 exec "pulseaudio-ctl up"
 bindsym $mod+F11 exec "pulseaudio-ctl down"
+bindsym XF86AudioLowerVolume exec "pulseaudio-ctl down"
+bindsym XF86AudioRaiseVolume exec "pulseaudio-ctl up"
+bindsym XF86AudioMute exec "pulseaudio-ctl mute"
+bindsym XF86AudioPrev exec "playerctl previous"
+bindsym XF86AudioNext exec "playerctl next"
+bindsym XF86AudioPlay exec "playerctl play-pause"
 
 assign [class="Spotify"] $ws2
 
@@ -217,6 +223,7 @@ bar {
 }
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 exec --no-startup-id dunst
+exec fluxgui
 #exec --no-startup-id xrandr --output HDMI-0 --off
 exec --no-startup-id gnome-screensaver &
 exec ~/.fehbg &
