@@ -1,9 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export GOPATH=$HOME/go
-export PATH="$HOME/.gem/ruby/2.6.0/bin:$HOME/bin:$GOPATH/bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$GOPATH/bin:$HOME/.local/bin:$PATH"
 export VISUAL="vim"
 export ERL_AFLAGS="-kernel shell_history enabled"
+export STEAM_COMPAT_DATA_PATH=$HOME/proton
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/ian/.oh-my-zsh
@@ -73,7 +74,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=es_ES.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -99,6 +100,7 @@ source $ZSH/oh-my-zsh.sh
 alias vi="vim"
 alias fzf='fzf --preview="less {}" --bind "enter:execute(vim {})" --bind "pgup:preview-up" --bind "pgdn:preview-down"'
 alias dup="docker-compose up -d && docker-compose logs -f app"
+alias http="python -m http.server -b 127.0.0.1 8080"
 
 source /etc/profile.d/autojump.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -107,11 +109,12 @@ zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 #bindkey -v
 #bindkey "^R" history-incremental-search-backward
 #
+bindkey \^U backward-kill-line
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-export GEM_HOME=$HOME/.gem
-export GEM_PATH=$HOME/.gem
+#export PATH="$HOME/.gem/bin:$PATH:$HOME/.rvm/bin"
+#export GEM_HOME=$HOME/.gem
+#source "$HOME/.rvm/scripts/rvm"
