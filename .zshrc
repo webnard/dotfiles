@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export GOPATH=$HOME/go
-export PATH="$HOME/.gem/ruby/2.5.0/bin:$HOME/bin:$GOPATH/bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.6.0/bin:$HOME/bin:$GOPATH/bin:$HOME/.local/bin:$PATH"
 export VISUAL="vim"
 export ERL_AFLAGS="-kernel shell_history enabled"
 
@@ -63,7 +63,7 @@ ZSH_THEME="garyblessington"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git,
+  #git,
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -110,3 +110,8 @@ zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+export GEM_HOME=$HOME/.gem
+export GEM_PATH=$HOME/.gem

@@ -81,7 +81,7 @@ vnoremap <leader>f :!eslint_d --stdin --fix-to-stdout<CR>gv
 highlight ColorColumn ctermbg=white
 highlight ExtraWhitespace ctermbg=darkred
 colorscheme desert
-set colorcolumn=120
+set colorcolumn=80
 set foldlevelstart=0
 
 autocmd BufEnter * let &titlestring = hostname() . "[vim(" . expand("%:t") . ")]"
@@ -105,6 +105,9 @@ match ExtraWhitespace /\s\+$\| \+\ze\t/
 
 let g:rustfmt_autosave = 1
 set incsearch
+
+set laststatus=2
+set statusline=%F%=%l:%c
 
 map ꧅ i
 imap ꧅ <esc>

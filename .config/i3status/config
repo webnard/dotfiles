@@ -14,11 +14,11 @@ general {
         interval = 5
 }
 
-order += "window_title_async"
+order += "window"
 #order += "taskwarrior"
 #order += "hamster"
 order += "spotify"
-order += "gpmdp"
+#order += "gpmdp"
 order += "volume master"
 # order += "disk /"
 # order += "disk /home"
@@ -42,7 +42,7 @@ taskwarrior {
   color = "FFFF00"
 }
 
-window_title_async {
+window {
     color = "#00FFFF"
 }
 wireless _first_ {

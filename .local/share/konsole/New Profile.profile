@@ -2,7 +2,7 @@
 AntiAliasFonts=true
 BoldIntense=true
 ColorScheme=DarkPastels
-Font=Fira Code Light,10,-1,5,25,0,0,0,0,0,Regular
+Font=Fira Code Light,14,-1,5,25,0,0,0,0,0
 UseFontLineChararacters=false
 
 [Cursor Options]
